@@ -1,9 +1,11 @@
 import Avatar from '../components/avatar'
 import Date from '../components/date'
+import CoverImage from './cover-image'
 import Link from 'next/link'
 
 export default function PostPreview({
   title,
+  coverImage,
   date,
   excerpt,
   author,
@@ -12,8 +14,10 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        < slug={slug}
+        <CoverImage
+          slug={slug}
           title={title}
+          responsiveImage={coverImage.responsiveImage}
         />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
